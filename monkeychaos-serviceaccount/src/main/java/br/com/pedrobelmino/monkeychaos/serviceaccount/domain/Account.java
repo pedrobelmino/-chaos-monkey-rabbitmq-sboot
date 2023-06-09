@@ -1,4 +1,12 @@
 package br.com.pedrobelmino.monkeychaos.serviceaccount.domain;
 
-public record Account(String cnpj, String agency, String account) {
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class Account {
+    private String document;
+    private String agency;
+    private String accountNumber;
 }
